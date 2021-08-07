@@ -7,7 +7,6 @@ import pandas as pd
 
 from mimic3benchmark.util import dataframe_from_csv
 
-
 def read_stays(subject_path):
     stays = dataframe_from_csv(os.path.join(subject_path, 'stays.csv'), index_col=None)
     stays.INTIME = pd.to_datetime(stays.INTIME)
